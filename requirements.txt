@@ -1,0 +1,8 @@
+streamlit==1.37.0
+opencv-python==4.9.0.80
+numpy==1.26.4
+Pillow==10.4.0
+tensorflow==2.19.0
+keras==3.10.0
+mediapipe==0.10.9
+matplotlib==3.10.7
