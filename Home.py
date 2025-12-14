@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+from pathlib import Path
 
 # ========================================
 # KONFIGURASI HALAMAN
@@ -82,18 +83,23 @@ st.markdown("""
 st.subheader("Referensi Bentuk Tangan (0–9)")
 st.caption("Contoh bentuk tangan untuk setiap angka.")
 
+
+BASE_DIR = Path(__file__).parent
+ASSETS_DIR = BASE_DIR / "assets"
+
 image_paths = [
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_0.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_1.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_2.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_3.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_4.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_5.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_6.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_7.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_8.JPG",
-    "C:/Users/hp_fq/OneDrive/Documents/Skripsi Penelitian/assets/angka_9.JPG",
+    ASSETS_DIR / "angka_0.JPG",
+    ASSETS_DIR / "angka_1.JPG",
+    ASSETS_DIR / "angka_2.JPG",
+    ASSETS_DIR / "angka_3.JPG",
+    ASSETS_DIR / "angka_4.JPG",
+    ASSETS_DIR / "angka_5.JPG",
+    ASSETS_DIR / "angka_6.JPG",
+    ASSETS_DIR / "angka_7.JPG",
+    ASSETS_DIR / "angka_8.JPG",
+    ASSETS_DIR / "angka_9.JPG",
 ]
+
 
 labels = [f"Angka {i}" for i in range(10)]
 
