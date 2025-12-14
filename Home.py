@@ -88,27 +88,33 @@ BASE_DIR = Path(__file__).parent
 ASSETS_DIR = BASE_DIR / "assets"
 
 image_paths = [
-    ASSETS_DIR / "angka_0.JPG",
-    ASSETS_DIR / "angka_1.JPG",
-    ASSETS_DIR / "angka_2.JPG",
-    ASSETS_DIR / "angka_3.JPG",
-    ASSETS_DIR / "angka_4.JPG",
-    ASSETS_DIR / "angka_5.JPG",
-    ASSETS_DIR / "angka_6.JPG",
-    ASSETS_DIR / "angka_7.JPG",
-    ASSETS_DIR / "angka_8.JPG",
-    ASSETS_DIR / "angka_9.JPG",
+    ASSETS_DIR / "angka_0.jpg",
+    ASSETS_DIR / "angka_1.jpg",
+    ASSETS_DIR / "angka_2.jpg",
+    ASSETS_DIR / "angka_3.jpg",
+    ASSETS_DIR / "angka_4.jpg",
+    ASSETS_DIR / "angka_5.jpg",
+    ASSETS_DIR / "angka_6.jpg",
+    ASSETS_DIR / "angka_7.jpg",
+    ASSETS_DIR / "angka_8.jpg",
+    ASSETS_DIR / "angka_9.jpg",
 ]
 
 
 labels = [f"Angka {i}" for i in range(10)]
 
 def image_card(path, label):
-    st.image(path, use_column_width=True)
+    if path.exists():
+        img = Image.open(path)
+        st.image(img, use_column_width=True)
+    else:
+        st.error(f"Gambar tidak ditemukan: {path.name}")
+
     st.markdown(
         f"<p style='text-align:center; font-weight:600;'>{label}</p>",
         unsafe_allow_html=True
     )
+
 
 # Baris 1
 cols = st.columns(5)
