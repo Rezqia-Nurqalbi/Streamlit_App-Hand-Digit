@@ -88,16 +88,16 @@ BASE_DIR = Path(__file__).parent
 ASSETS_DIR = BASE_DIR / "assets"
 
 image_paths = [
-    ASSETS_DIR / "angka_0.jpg",
-    ASSETS_DIR / "angka_1.jpg",
-    ASSETS_DIR / "angka_2.jpg",
-    ASSETS_DIR / "angka_3.jpg",
-    ASSETS_DIR / "angka_4.jpg",
-    ASSETS_DIR / "angka_5.jpg",
-    ASSETS_DIR / "angka_6.jpg",
-    ASSETS_DIR / "angka_7.jpg",
-    ASSETS_DIR / "angka_8.jpg",
-    ASSETS_DIR / "angka_9.jpg",
+    ASSETS_DIR / "angka_0.JPG",
+    ASSETS_DIR / "angka_1.JPG",
+    ASSETS_DIR / "angka_2.JPG",
+    ASSETS_DIR / "angka_3.JPG",
+    ASSETS_DIR / "angka_4.JPG",
+    ASSETS_DIR / "angka_5.JPG",
+    ASSETS_DIR / "angka_6.JPG",
+    ASSETS_DIR / "angka_7.JPG",
+    ASSETS_DIR / "angka_8.JPG",
+    ASSETS_DIR / "angka_9.JPG",
 ]
 
 
